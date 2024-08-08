@@ -284,3 +284,87 @@ form button:hover {
     background-color: #b74b4b;
     color: #333;
 }
+
+.carousel {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+}
+
+.carousel-item {
+    display: none;
+    text-align: center;
+    padding: 20px;
+    background-color: #ecf0f1;
+    border-radius: 10px;
+}
+
+.carousel-item.active {
+    display: block;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    cursor: pointer;
+    position: absolute;
+    top: 25%;
+    transform: translateY(-50%);
+    width: auto;
+    padding: 16px;
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-color: transparent;
+}
+
+.carousel-control-next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    background-color: #16a085;
+}
+
+@media (max-width: 768px) {
+    .carousel-item {
+        padding: 15px;
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+        font-size: 16px;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel-item {
+        padding: 10px;
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+        font-size: 12px;
+        padding: 5px;
+    }
+}
+
+img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  iframe {
+    aspect-ratio: 16 / 9;
+    height: auto;
+    width: 100%;
+    position: middle;
+}
